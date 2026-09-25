@@ -20,7 +20,11 @@ export const metadata = {
   title: "FitLog — Workout Library",
   description:
     "FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today's plan, and watch the week's work add up.",
-};
+
+    icons: {
+    icon: "/logo.png",
+  },
+  };
 
 export default function RootLayout({ children }) {
   return (
