@@ -17,7 +17,7 @@ export default function WorkoutCard({ workout }) {
           {workout.category.slice(0, 5).map((c) => (
             <span
               key={c}
-              className="rounded-full bg-surface3 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-accent"
+              className="rounded-full bg-accent px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-black "
             >
               {c}
             </span>

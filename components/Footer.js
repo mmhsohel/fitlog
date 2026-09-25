@@ -11,6 +11,7 @@ export default function Footer() {
               alt="FitLog Logo"
               width={20}
               height={20}
+               className="rotate-90 transition-transform"
             />
           <span className="font-display text-sm font-bold tracking-wide text-white">
             FITLOG

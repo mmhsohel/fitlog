@@ -11,15 +11,14 @@ export default function Navbar() {
   const { plan, saved } = usePlan();
 
   const linkClass = (href) => {
-  const active =
-    href === "/#library"
-      ? pathname === "/"
-      : pathname === href;
+    const active =
+      href === "/#library"
+        ? pathname === "/"
+        : pathname === href;
 
-  return `text-sm font-semibold tracking-wide transition-colors ${
-    active ? "text-accent" : "text-white/70 hover:text-white"
-  }`;
-};
+    return `text-sm font-semibold tracking-wide transition-colors ${active ? "text-accent" : "text-white/70 hover:text-white"
+      }`;
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-surface/95 backdrop-blur">
@@ -30,6 +29,7 @@ export default function Navbar() {
             alt="FitLog Logo"
             width={20}
             height={20}
+            className="rotate-90 transition-transform"
           />
           <span className="font-display text-lg font-bold tracking-wide text-white">
             FITLOG
