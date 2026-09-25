@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Dumbbell } from "lucide-react";
 import { usePlan } from "@/context/PlanContext";
 import Image from "next/image";
 

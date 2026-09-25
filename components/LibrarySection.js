@@ -9,7 +9,7 @@ import Loader from "./Loader";
 
 export default function LibrarySection() {
   const [workouts, setWorkouts] = useState([]);
-  const [status, setStatus] = useState("loading"); // loading | ready | error
+  const [status, setStatus] = useState("loading"); 
   const [sort, setSort] = useState("duration");
   const [query, setQuery] = useState("");
 

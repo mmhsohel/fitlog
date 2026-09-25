@@ -22,17 +22,13 @@ function hashString(str) {
   return Math.abs(hash);
 }
 
-/**
- * A self-drawn illustration (gradient + icon), used instead of pulling
- * images from the API so every card has its own consistent, owned art.
- */
 export default function WorkoutIllustration({ image = "", seed = "", className = "" }) {
   const h = hashString(String(seed));
   const [accent] = PALETTES[h % PALETTES.length];
   const Icon = ICONS[h % ICONS.length];
 
-  console.log("WorkoutIllustration seed:", seed); // Debugging line
-  console.log("WorkoutIllustration image:", image); // Debugging line
+  console.log("WorkoutIllustration seed:", seed);
+  console.log("WorkoutIllustration image:", image); 
 
   return (
     <div

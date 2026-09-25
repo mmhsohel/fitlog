@@ -25,3 +25,9 @@ body {
   background: #ccff00;
   color: #000;
 }
+
+@layer utilities {
+  .animate-spin-fast {
+    animation: spin 0.05s linear infinite;
+  }
+}

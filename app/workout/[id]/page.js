@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams, notFound } from "next/navigation";
-import { Clock, Flame, Star, Plus, Bookmark } from "lucide-react";
+import {  Plus, Bookmark } from "lucide-react";
 import { getWorkoutById } from "@/lib/api";
 import { usePlan } from "@/context/PlanContext";
 import WorkoutIllustration from "@/components/WorkoutIllustration";

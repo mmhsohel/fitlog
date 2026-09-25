@@ -19,7 +19,6 @@ export function PlanProvider({ children }) {
   const [toasts, setToasts] = useState([]);
   const [hydrated, setHydrated] = useState(false);
 
-  // Load persisted state on mount
   useEffect(() => {
     try {
       const stored = window.localStorage.getItem(STORAGE_KEY);
@@ -29,13 +28,12 @@ export function PlanProvider({ children }) {
         setSaved(parsed.saved || []);
       }
     } catch (e) {
-      // ignore corrupt storage
+  
     } finally {
       setHydrated(true);
     }
   }, []);
 
-  // Persist on change
   useEffect(() => {
     if (!hydrated) return;
     try {
@@ -44,7 +42,6 @@ export function PlanProvider({ children }) {
         JSON.stringify({ plan, saved })
       );
     } catch (e) {
-      // ignore quota errors
     }
   }, [plan, saved, hydrated]);
 

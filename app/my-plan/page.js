@@ -140,7 +140,6 @@ function PlanRow({ workout, onRemove, onToggleDone }) {
 export default function MyPlanPage() {
   const [tab, setTab] = useState("plan");
 
-  // Selected sort option
   const [sort, setSort] = useState("duration");
 
   const {
