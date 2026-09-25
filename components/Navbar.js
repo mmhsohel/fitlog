@@ -28,8 +28,8 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="FitLog Logo"
-            width={32}
-            height={32}
+            width={20}
+            height={20}
           />
           <span className="font-display text-lg font-bold tracking-wide text-white">
             FITLOG

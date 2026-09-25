@@ -9,7 +9,7 @@ export default function WorkoutCard({ workout }) {
   return (
     <Link
       href={`/workout/${workout.id}`}
-      className="group flex flex-col overflow-hidden rounded-xl border border-line bg-surface2 transition-colors hover:border-accent/50"
+      className="group flex flex-col overflow-hidden rounded-xl border border-line bg-[#1a1d23] transition-colors hover:border-accent/50"
     >
       <WorkoutIllustration image={workout.raw.image} seed={workout.id + workout.name} className="h-40 w-full" />
 
