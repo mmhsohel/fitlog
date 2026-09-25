@@ -5,7 +5,7 @@ import { Clock, Flame, Star } from "lucide-react";
 import WorkoutIllustration from "./WorkoutIllustration";
 
 export default function WorkoutCard({ workout }) {
-  console.log("WorkoutCard workout:", workout.raw); // Debugging line
+  console.log("WorkoutCard workout:", workout.raw); 
   return (
     <Link
       href={`/workout/${workout.id}`}

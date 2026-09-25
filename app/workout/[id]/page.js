@@ -63,6 +63,7 @@ export default function WorkoutDetailPage() {
     <div className="mx-auto max-w-content px-4 py-12 sm:px-6">
       <div className="grid gap-10 md:grid-cols-2">
         <WorkoutIllustration
+          image={workout.raw.image}
           seed={workout.id + workout.name}
           className="h-72 w-full rounded-2xl border border-line sm:h-96"
         />
