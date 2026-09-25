@@ -5,17 +5,16 @@ import { Clock, Flame, Star } from "lucide-react";
 import WorkoutIllustration from "./WorkoutIllustration";
 
 export default function WorkoutCard({ workout }) {
-  console.log("WorkoutCard workout:", workout.raw); 
   return (
     <Link
       href={`/workout/${workout.id}`}
-      className="group flex flex-col overflow-hidden rounded-xl border border-line bg-[#1a1d23] transition-colors hover:border-accent/50"
+      className="group flex flex-col overflow-hidden rounded-xl  border border-line bg-[#1a1d23] transition-colors hover:border-accent/50"
     >
-      <WorkoutIllustration image={workout.raw.image} seed={workout.id + workout.name} className="h-40 w-full" />
+      <WorkoutIllustration image={workout.raw.image} seed={workout.id + workout.name} className="h-56 w-full" />
 
       <div className="flex flex-1 flex-col gap-2 p-4">
         <div className="flex flex-wrap gap-1.5">
-          {workout.category.slice(0, 2).map((c) => (
+          {workout.category.slice(0, 5).map((c) => (
             <span
               key={c}
               className="rounded-full bg-surface3 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-accent"

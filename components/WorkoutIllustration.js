@@ -36,7 +36,7 @@ export default function WorkoutIllustration({ image = "", seed = "", className =
 
   return (
     <div
-      className={`relative flex items-center justify-center overflow-hidden ${className}`}
+      className={`relative flex min-h-0 items-center justify-center overflow-hidden ${className}`}
       style={{
         background: `radial-gradient(circle at 30% 20%, ${accent}33, transparent 60%), linear-gradient(135deg, #1a1a1a, #101010)`,
       }}
