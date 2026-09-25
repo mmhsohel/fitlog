@@ -11,11 +11,15 @@ export default function Navbar() {
   const { plan, saved } = usePlan();
 
   const linkClass = (href) => {
-    const active = pathname === href;
-    return `text-sm font-semibold tracking-wide transition-colors ${
-      active ? "text-accent" : "text-white/70 hover:text-white"
-    }`;
-  };
+  const active =
+    href === "/#library"
+      ? pathname === "/"
+      : pathname === href;
+
+  return `text-sm font-semibold tracking-wide transition-colors ${
+    active ? "text-accent" : "text-white/70 hover:text-white"
+  }`;
+};
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-surface/95 backdrop-blur">
