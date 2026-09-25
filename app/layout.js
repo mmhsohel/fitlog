@@ -17,14 +17,18 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "FitLog — Workout Library",
+  title: {
+    default: "FitLog",
+    template: "%s | FitLog",
+  },
+
   description:
     "FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today's plan, and watch the week's work add up.",
 
-    icons: {
+  icons: {
     icon: "/logo.png",
   },
-  };
+};
 
 export default function RootLayout({ children }) {
   return (
