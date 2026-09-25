@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Dumbbell } from "lucide-react";
 import { usePlan } from "@/context/PlanContext";
+import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -20,9 +21,12 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-line bg-surface/95 backdrop-blur">
       <div className="mx-auto flex max-w-content items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-accent text-black">
-            <Dumbbell size={18} strokeWidth={2.5} />
-          </span>
+          <Image
+            src="/logo.png"
+            alt="FitLog Logo"
+            width={32}
+            height={32}
+          />
           <span className="font-display text-lg font-bold tracking-wide text-white">
             FITLOG
           </span>

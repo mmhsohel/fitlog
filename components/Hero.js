@@ -1,10 +1,11 @@
 "use client";
 
 import { ArrowDown, Dumbbell } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="border-b border-line bg-surface">
+    <section className="rounded-md  bg-[#1a1d23] ">
       <div className="mx-auto grid max-w-content items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
         <div>
           <p className="mb-3 text-xs font-bold tracking-[0.25em] text-accent">
@@ -26,13 +27,15 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="relative flex h-64 items-center justify-center rounded-2xl border border-line bg-gradient-to-br from-surface2 to-black sm:h-80 md:h-96">
+        <div className="relative flex h-64 items-center justify-center rounded-2xl  sm:h-80 md:h-96">
           <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-accent/10 blur-2xl" />
           <div className="absolute -bottom-10 -left-10 h-48 w-48 rounded-full bg-accent/5 blur-3xl" />
-          <Dumbbell
-            size={140}
-            strokeWidth={1}
-            className="relative z-10 text-accent"
+         <Image
+            src="/banner.png"
+            alt="Gym Image"
+            width={500}
+            height={500}
+            className="relative z-10"
           />
         </div>
       </div>

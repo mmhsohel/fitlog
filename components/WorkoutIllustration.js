@@ -1,7 +1,7 @@
 "use client";
 
 import { Dumbbell, Flame, HeartPulse, PersonStanding, Zap, Activity } from "lucide-react";
-
+import Image from "next/image";
 const PALETTES = [
   ["#ccff00", "#1c1c1c"],
   ["#7dd3fc", "#1c1c1c"],
@@ -26,10 +26,13 @@ function hashString(str) {
  * A self-drawn illustration (gradient + icon), used instead of pulling
  * images from the API so every card has its own consistent, owned art.
  */
-export default function WorkoutIllustration({ seed = "", className = "" }) {
+export default function WorkoutIllustration({ image = "", seed = "", className = "" }) {
   const h = hashString(String(seed));
   const [accent] = PALETTES[h % PALETTES.length];
   const Icon = ICONS[h % ICONS.length];
+
+  console.log("WorkoutIllustration seed:", seed); // Debugging line
+  console.log("WorkoutIllustration image:", image); // Debugging line
 
   return (
     <div
@@ -46,7 +49,23 @@ export default function WorkoutIllustration({ seed = "", className = "" }) {
         className="absolute -left-8 -bottom-8 h-32 w-32 rounded-full opacity-10"
         style={{ background: accent }}
       />
-      <Icon size={56} strokeWidth={1.5} color={accent} className="relative z-10" />
+
+      {image ? (
+        <Image
+          src={image}
+          alt={seed}
+          fill
+          className="relative z-10 object-cover"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      ) : (
+        <Icon
+          size={56}
+          strokeWidth={1.5}
+          color={accent}
+          className="relative z-10"
+        />
+      )}
     </div>
   );
 }

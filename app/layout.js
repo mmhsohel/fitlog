@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen bg-surface font-body text-white antialiased">
         <PlanProvider>
           <Navbar />
-          <main className="min-h-[60vh]">{children}</main>
+          <main className="min-h-[60vh] px-4 sm:px-6 lg:px-8">{children}</main>
           <Footer />
           <ToastStack />
         </PlanProvider>

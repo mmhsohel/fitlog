@@ -5,12 +5,13 @@ import { Clock, Flame, Star } from "lucide-react";
 import WorkoutIllustration from "./WorkoutIllustration";
 
 export default function WorkoutCard({ workout }) {
+  console.log("WorkoutCard workout:", workout.raw); // Debugging line
   return (
     <Link
       href={`/workout/${workout.id}`}
       className="group flex flex-col overflow-hidden rounded-xl border border-line bg-surface2 transition-colors hover:border-accent/50"
     >
-      <WorkoutIllustration seed={workout.id + workout.name} className="h-40 w-full" />
+      <WorkoutIllustration image={workout.raw.image} seed={workout.id + workout.name} className="h-40 w-full" />
 
       <div className="flex flex-1 flex-col gap-2 p-4">
         <div className="flex flex-wrap gap-1.5">
