@@ -104,21 +104,7 @@ export default function WorkoutDetailPage() {
             ))}
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button
-              onClick={() => addToPlan(workout)}
-              disabled={isPlanFull}
-              className="flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-bold uppercase text-black transition-transform hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-40"
-            >
-              <Plus size={16} /> Add to today&apos;s plan
-            </button>
-            <button
-              onClick={() => addToSaved(workout)}
-              className="flex items-center gap-2 rounded-md border border-white/30 px-5 py-2.5 text-sm font-bold uppercase text-white transition-colors hover:border-accent hover:text-accent"
-            >
-              <Bookmark size={16} /> Save for later
-            </button>
-          </div>
+         
         </div>
       </div>
 
@@ -136,7 +122,25 @@ export default function WorkoutDetailPage() {
             </li>
           ))}
         </ol>
-      </div>
+      </div>      
+       
+<div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+  <button
+    onClick={() => addToPlan(workout)}
+    disabled={isPlanFull}
+    className="flex w-full items-center justify-center gap-2 rounded-md bg-accent px-5 py-2.5 text-xs font-bold uppercase text-black transition-transform hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:text-sm"
+  >
+    <Plus size={16} /> Add to today&apos;s plan
+  </button>
+  <button
+    onClick={() => addToSaved(workout)}
+    className="flex w-full items-center justify-center gap-2 rounded-md border border-white/30 px-5 py-2.5 text-xs font-bold uppercase text-white transition-colors hover:border-accent hover:text-accent sm:w-auto sm:text-sm"
+  >
+    <Bookmark size={16} /> Save for later
+  </button>
+</div>
+
+
     </div>
   );
 }

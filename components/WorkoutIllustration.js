@@ -27,8 +27,6 @@ export default function WorkoutIllustration({ image = "", seed = "", className =
   const [accent] = PALETTES[h % PALETTES.length];
   const Icon = ICONS[h % ICONS.length];
 
-  console.log("WorkoutIllustration seed:", seed);
-  console.log("WorkoutIllustration image:", image); 
 
   return (
     <div
